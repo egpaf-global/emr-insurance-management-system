@@ -1,0 +1,63 @@
+<div [@pageTransition]>
+<app-modal [show]="showModal" (closeModal)="onModalCloseHandler($event)">
+   <div class="sm:flex sm:items-start">
+            <div
+                class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
+                <i class="bi bi-exclamation-circle"></i>
+            </div>
+            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">
+                    {{ "Client Info" }} 
+                </h3>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All
+                        of your data will be permanently removed. This action cannot be undone.</p>
+                </div>
+            </div>
+        </div>
+    </app-modal>
+
+<div class="card p-5">
+      <app-alert [show]="show" [type]="alertType.Danger">
+         <p>{{alert_message}}</p>
+      </app-alert>
+      <div class="card-title">
+         <h3 class="text-xl font-bold leading-none mb-5">{{ "Select input" }}</h3>
+      </div>
+      <div class="flex">
+         <form class="max-w-sm">
+            <label for="countries" class="form-label">
+               {{ "Select Insurance" }}
+            </label>
+            <select name="selectedInsurance" class="form-select" [(ngModel)]="selectedInsurance"  (change)="onInsuranceSelected()">
+               <option >--{{ "Select Insurance Scheme" }} --</option>
+              <option *ngFor="let insurance of insuranceList" [value]="insurance.name">{{insurance.name}}</option>
+            </select>
+         </form>
+
+         <div class="max-w-sm ml-10">
+            <label  class="form-label">
+               {{ "Starte Date" }}
+            </label>
+            <cha-date-picker (dataEvent)="receiveDateFrom($event)"></cha-date-picker>
+         </div>
+          <div class="max-w-sm ml-10">
+            <label  class="form-label">
+               {{ "End Date" }}
+            </label>
+            <cha-date-picker (dataEvent)="receiveDateTo($event)"></cha-date-picker>
+         </div>
+      </div>
+   </div>
+
+
+<data-table 
+[rowData]="patients" 
+[pageData]="pages" 
+[columnData]="columnData"
+[state]="state"
+(showModal)="onModalShowHandler($event)"
+ />
+
+
+</div>
