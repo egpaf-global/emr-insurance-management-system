@@ -52,7 +52,7 @@ export class SigninComponent {
     this.authService.signIn(data).then((result)=>{
       this.isLoading = false;
       console.log('login results:',result);
-      this.router.navigate([AppRoutes.Admin, ElementRoutes.DataTable]);
+      this.router.navigate([AppRoutes.Admin, ElementRoutes.InsuredClients]);
       
 
     },(error)=>{
