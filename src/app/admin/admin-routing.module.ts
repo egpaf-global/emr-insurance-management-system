@@ -5,7 +5,7 @@ import { AdminPageNotFoundComponent } from './views/admin-page-not-found/admin-p
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { AdminAlertComponent } from './views/elements/alert/admin-alert.component';
 import { ButtonsComponent } from './views/elements/buttons/buttons.component';
-import { AdminDataTableComponent } from './views/elements/data-table/data-table.component';
+import { AdminDataTableComponent } from './views/elements/insured-clients/insured-clients.component';
 import { FormsComponent } from './views/elements/forms/forms.component';
 import { AdminModalComponent } from './views/elements/modal/admin-modal.component';
 import { AdminTabComponent } from './views/elements/tab/admin-tab.component';
@@ -18,12 +18,12 @@ import { UsersComponent } from './views/settings/users/users.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: ElementRoutes.DataTable,
+    redirectTo: ElementRoutes.InsuredClients,
     pathMatch: 'full',
   },
   {
     title: 'Insurance',
-    path: ElementRoutes.DataTable,
+    path: ElementRoutes.InsuredClients,
     component: AdminDataTableComponent,
   },
   {
@@ -67,8 +67,8 @@ const routes: Routes = [
         component: ButtonsComponent,
       },
       {
-        title: 'Data Table',
-        path: ElementRoutes.DataTable,
+        title: 'Insured Clients',
+        path: ElementRoutes.InsuredClients,
         component: AdminDataTableComponent,
       },
       {
