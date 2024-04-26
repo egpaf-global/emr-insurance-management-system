@@ -2,6 +2,9 @@ import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { pageTransition } from 'src/app/shared/utils/animations';
+import { CommonService } from 'src/app/_core/services/common.service';
+import { AppRoutes } from 'src/app/app.routes';
+import { AdminRoutes } from '../../admin.routes';
 Chart.register(...registerables);
 
 @Component({
@@ -11,6 +14,13 @@ Chart.register(...registerables);
   animations: [pageTransition]
 })
 export class DashboardComponent implements OnInit {
+  readonly appRoutes = AppRoutes;
+  readonly adminRoutes = AdminRoutes;
+  
+  constructor(
+    public readonly commonServices: CommonService
+  ){}
+
   eventDate: any = formatDate(new Date(), 'MMM dd, yyyy', 'en');
 
   ngOnInit(): void {
