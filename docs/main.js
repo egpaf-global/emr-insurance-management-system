@@ -210,7 +210,7 @@ class AppTitleStrategy extends _angular_router__WEBPACK_IMPORTED_MODULE_0__.Titl
   updateTitle(routerState) {
     const title = this.buildTitle(routerState);
     if (title !== undefined) {
-      this.title.setTitle(`Ngwind - ${title}`);
+      this.title.setTitle(`EMR Insurance Management - ${title}`);
     }
   }
   static #_ = this.ɵfac = function AppTitleStrategy_Factory(t) {
@@ -3034,7 +3034,7 @@ class PublicFooterComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵStandaloneFeature"]],
     decls: 26,
     vars: 3,
-    consts: [[1, "bg-slate-50"], [1, "container", "p-4", "md:py-8"], [1, "sm:flex", "sm:items-center", "sm:justify-between"], [1, "flex", "items-center", "mb-4", "sm:mb-0", "space-x-3", "rtl:space-x-reverse", 3, "href"], ["alt", "Ngwind", 1, "h-8", 3, "src"], [1, "self-center", "text-2xl", "font-semibold", "whitespace-nowrap", "dark:text-white"], [1, "flex", "flex-wrap", "items-center", "mb-6", "text-sm", "font-medium", "text-gray-500", "sm:mb-0", "dark:text-gray-400"], ["href", "#", 1, "hover:underline", "me-4", "md:me-6"], ["href", "#", 1, "hover:underline"], [1, "my-6", "border-gray-200", "sm:mx-auto", "dark:border-gray-700", "lg:my-8"], [1, "block", "text-sm", "text-gray-500", "sm:text-center", "dark:text-gray-400"]],
+    consts: [[1, "bg-slate-50"], [1, "container", "p-4", "md:py-8"], [1, "sm:flex", "sm:items-center", "sm:justify-between"], [1, "flex", "items-center", "mb-4", "sm:mb-0", "space-x-3", "rtl:space-x-reverse", 3, "href"], ["alt", "EMR Insurance Management", 1, "h-8", 3, "src"], [1, "self-center", "text-2xl", "font-semibold", "whitespace-nowrap", "dark:text-white"], [1, "flex", "flex-wrap", "items-center", "mb-6", "text-sm", "font-medium", "text-gray-500", "sm:mb-0", "dark:text-gray-400"], ["href", "#", 1, "hover:underline", "me-4", "md:me-6"], ["href", "#", 1, "hover:underline"], [1, "my-6", "border-gray-200", "sm:mx-auto", "dark:border-gray-700", "lg:my-8"], [1, "block", "text-sm", "text-gray-500", "sm:text-center", "dark:text-gray-400"]],
     template: function PublicFooterComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
