@@ -13,7 +13,6 @@ import { ModalComponent } from 'src/app/shared/components/modal/modal.component'
 import { ModalModule } from 'src/app/shared/components/modal/modal.module';
 import { pageTransition } from 'src/app/shared/utils/animations';
 
- 
 @Component({
   selector: 'app-data-table',
   standalone: true,
@@ -49,33 +48,21 @@ export class AdminDataTableComponent {
 
   modalCompnent: ModalComponent
 
-
-  
-
   constructor(private adminService:AdminService){
     this.modalCompnent = new ModalComponent();
     this.init();
-
-
   }
 
   async init(){
 
     this.adminService.getInsuranceList().then((result)=>{
       this.insuranceList = result;
-
-
-
     });
-
-
-
   }
 
   onInsuranceSelected(){
     console.log('here1',this.selectedInsurance);
     
-
     if(this.show == true && this.selectedInsurance != null){
       if(this.dateTo == null){
         this.alert_message = 'Make sure the End Date is selected';
@@ -85,34 +72,25 @@ export class AdminDataTableComponent {
         this.loadTable(this.selectedInsurance);
       }
     }
-
-
   }
 
   getPatientsByInsurance(insurance_id:any){
-    
     this.adminService.getPatientsByInsurance(insurance_id).then((result)=>{
       this.insuranceList = result;
-
-
-
     });
   }
 
   receiveDateFrom(data: string) {
-
     console.log('recieved data from::',data);
     this.dateFrom = data;
     if(this.show == true && this.selectedInsurance != null && this.dateTo != null){
       this.show = false;
       this.loadTable(this.selectedInsurance);
-
     }
 
   }
 
   receiveDateTo(data: string) {
-
     console.log('recieved data to::',data);
     this.dateTo = data;
     this.show =false;
@@ -133,7 +111,6 @@ export class AdminDataTableComponent {
   }
 
   loadTable(insurance_id:any){
-
     console.log('load table')
     this.state = true;
     this.adminService.getPatientsByInsurance(insurance_id).then((results)=>{
@@ -154,9 +131,4 @@ export class AdminDataTableComponent {
   onModalShowHandler(event:boolean){
     this.showModal = event;
   }
-
-
-  
-
-
 }

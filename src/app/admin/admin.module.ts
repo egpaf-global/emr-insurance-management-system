@@ -11,21 +11,25 @@ import { EventsComponent } from './views/events/events.component';
 import { SettingsModule } from './views/settings/settings.module';
 import { ElementsModule } from './views/elements/elements.module';
 import { AdminService } from './services/admin.service';
+import { DashboardCardComponent } from "../shared/components/dashboard-card/dashboard-card.component";
+import { ListCardComponent } from "../shared/components/list-card/list-card.component";
 
 
 @NgModule({
-  declarations: [
-    AdminComponent,
-    DashboardComponent,
-    AdminPageNotFoundComponent,
-    EventsComponent,
-  ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    LayoutsModule,
-    SettingsModule,
-    ElementsModule
-  ]
+    declarations: [
+        AdminComponent,
+        DashboardComponent,
+        AdminPageNotFoundComponent,
+        EventsComponent,
+    ],
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        LayoutsModule,
+        SettingsModule,
+        ElementsModule,
+        DashboardCardComponent,
+        ListCardComponent
+    ]
 })
 export class AdminModule { }

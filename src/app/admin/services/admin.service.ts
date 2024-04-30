@@ -47,31 +47,33 @@ export class AdminService {
             reject(error);
           }
         );*/
-     
-      
-
     });
      
   }
-
-
 
   getPatientsByInsurance(insurance_id:any): Promise<any>{
     let data = {insurance_id:insurance_id};
     return new Promise ((resolve, reject)=>{
       let test_data = [
-      {
-        name:'Patient 1',
-        patientid: 1,
-        visit_date: '10-3-2024',
-        insurance_name: 'Prime Insurance',
-        insurance_number: 'NA1234'
-        
-      }
+        {
+          name:'Rick Ross',
+          patientid: 1,
+          visit_date: '10-3-2024',
+          insurance_name: 'Prime Insurance',
+          insurance_number: 'NA1234'
+          
+        },
+        {
+          name:'Establish Koyen',
+          patientid: 2,
+          visit_date: '10-3-2024',
+          insurance_name: 'MASM Insurance',
+          insurance_number: 'MASM1234'
+          
+        }
       ];
 
       resolve(test_data);
-
       /*this.httpClient.post(this.endpoints.insurance_list, data).subscribe(
           (response) => {
             resolve(response);
@@ -80,9 +82,6 @@ export class AdminService {
             reject(error);
           }
         );*/
-     
-      
-
     });
      
   }
