@@ -13,6 +13,8 @@ export class ModalComponent {
   @Input() title: string = "Modal";
   @Input() size: string = "xl:max-w-7xl";
   @Input() footer: boolean = true;
+  @Input() confirmBtn: string = "Proceed";
+  @Input() confirmBtnColors: string = "bg-red-600 hover:bg-red-500"
   
   @Output() closeModal = new EventEmitter<boolean>();
 
