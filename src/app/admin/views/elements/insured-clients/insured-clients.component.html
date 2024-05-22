@@ -1,20 +1,49 @@
 <div [@pageTransition]>
-<app-modal [show]="showModal" (closeModal)="onModalCloseHandler($event)">
-   <div class="sm:flex sm:items-start">
-      <div
-            class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
-            <i class="bi bi-exclamation-circle"></i>
-      </div>
-      <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">
-               {{ "Client Info" }} 
-            </h3>
-            <div class="mt-2">
-               <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All
-                  of your data will be permanently removed. This action cannot be undone.</p>
+<app-modal [show]="showModal" (closeModal)="onModalCloseHandler($event)" size="xl:max-w-7x1" confirmBtn="Pay Bill" confirmBtnColors="btn btn-primary me-2">
+   <ul class="divide-y divide-gray-300 max-w-sm mt-0 mx-auto px-4 w-full">
+      <li class="py-4">
+         <div class="flex items-center space-x-4">
+            <div
+               class="mx-auto item-center flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
+               <i class="bi bi-exclamation-circle"></i>
             </div>
-      </div>
-   </div>
+            <span class="text-lg font-bold">{{ "Client Information" }}</span>
+         </div>
+   
+         <ul class="divide-y divide-gray-300 bg-gray-50 rounded-md px-4 py-2 mt-4">
+            <li class="py-2">
+               <div class="flex items-center space-x-4">
+                     <span class="text-md font-medium">{{ "Visit 1" }}</span>
+               </div>
+            </li>
+
+            <li class="py-2">
+               <div class="flex items-center space-x-4">
+                     <span class="text-md font-medium">{{ "Encounter 1" }}</span>
+               </div>
+
+               <ul class="divide-y divide-gray-300 bg-gray-100 rounded-md px-4 py-2 mt-2">
+                  <li class="py-2">
+                     <div class="flex items-center space-x-4">
+                        <span class="text-sm font-medium">{{ "Observation" }}</span>
+                     </div>
+                  </li>
+                  <li class="py-2">
+                     <div class="flex items-center space-x-4">
+                        <span class="text-sm font-medium">{{ "Observation" }}</span>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+
+            <li class="py-2">
+               <div class="flex items-center space-x-4">
+                  <span class="text-md font-medium">{{ "Encounter 2" }}</span>
+               </div>
+            </li>
+         </ul>
+      </li>
+   </ul>
 </app-modal>
 
 <div class="card p-5">
